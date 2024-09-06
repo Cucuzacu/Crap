@@ -19,8 +19,7 @@ int main()
     char o, p, q, o1, o2, o3, o4, o5;
     static int var[10000] = { 0 };
     int n, i, j, k, r, m, z, x1, y1, x2, y2, x3, y3, x4, y4, x5, y5;
-    fi >> n;
-    for (i = 0; i < n; i++)
+    while(true)
     {
         fi >> c;
         if (strcmp(c, "initialyze") == 0)
