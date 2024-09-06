@@ -1,3 +1,4 @@
+//good luck understanding this thing
 #include <string.h>
 #include <thread>
 #include <chrono>
