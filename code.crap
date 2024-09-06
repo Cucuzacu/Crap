@@ -179,3 +179,12 @@ decrease 2
 printstring You
 printspace
 printstring Lost!
+nextline
+printstring The
+printspace
+printstring number
+printspace
+printstring was
+printspace
+printvar 1
+wait 1000
