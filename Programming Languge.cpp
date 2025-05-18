@@ -29,6 +29,13 @@ void clear()
     abc = false;
 }
 
+void writefile(int r, char b[10000])
+{
+    std::ofstream fo(b);
+    fo << "value " << r << ' ' << var[r - 1];
+    clear();
+}
+
 int extension(char b[10000])
 {
     std::ifstream fi_e(b);
@@ -275,7 +282,18 @@ int extension(char b[10000])
                         fi_e >> b;
                         extension(b);
                     }
+                    else if (strcmp(b, "writefile") == 0)
+                    {
+                        fi_e >> r >> a;
+                        writefile(r, a);
+                        }
+                    else if (strcmp(b, "writefileall") == 0)
+                    {
+                        fi_e >> a;
+                        for (r = 1; r <= 10000; r++) writefile(r, a);
+                    }
                     else if (strcmp(b, "") == 0);
+                    else if (strcmp(c, ";") == 0) fi_e >> a;
                     else if (strcmp(b, "beep") == 0) std::cout << '\a';
                     else if (strcmp(b, "printspace") == 0) std::cout << ' ';
                     else if (strcmp(b, "nextline") == 0) std::cout << '\n';
@@ -525,6 +543,17 @@ int extension(char b[10000])
             fi_e >> b;
             extension(b);
         }
+        else if (strcmp(c, "writefile") == 0)
+        {
+            fi_e >> r >> b;
+            writefile(r, b);
+                        }
+        else if (strcmp(c, "writefileall") == 0)
+        {
+            fi_e >> b;
+            for (r = 1; r <= 10000; r++) writefile(r, b);
+        }
+        else if (strcmp(c, ";") == 0) fi_e >> b;
         else if (strcmp(c, "printspace") == 0) std::cout << ' ';
         else if (strcmp(c, "nextline") == 0) std::cout << '\n';
         else if (strcmp(c, "clear") == 0) system("cls");
@@ -781,7 +810,18 @@ int main()
                         fi >> b;
                         extension(b);
                     }
+                    else if (strcmp(b, "writefile") == 0)
+                    {
+                        fi >> r >> a;
+                        writefile(r, a);
+                        }
+                    else if (strcmp(b, "writefileall") == 0)
+                    {
+                        fi >> a;
+                        for (r = 1; r <= 10000; r++) writefile(r, a);
+                    }
                     else if (strcmp(b, "") == 0);
+                    else if (strcmp(c, ";") == 0) fi >> a;
                     else if (strcmp(b, "beep") == 0) std::cout << '\a';
                     else if (strcmp(b, "printspace") == 0) std::cout << ' ';
                     else if (strcmp(b, "nextline") == 0) std::cout << '\n';
@@ -1030,6 +1070,17 @@ int main()
             fi >> b;
             extension(b);
         }
+        else if (strcmp(c, "writefile") == 0)
+        {
+            fi >> r >> b;
+            writefile(r, b);
+        }
+        else if (strcmp(c, "writefileall") == 0)
+        {
+            fi >> b;
+            for(r = 1; r <= 10000; r++) writefile(r, b);
+        }
+        else if (strcmp(c, ";") == 0) fi >> b;
         else if (strcmp(c, "beep") == 0) std::cout << '\a';
         else if (strcmp(c, "printspace") == 0) std::cout << ' ';
         else if (strcmp(c, "nextline") == 0) std::cout << '\n';
