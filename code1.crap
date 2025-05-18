@@ -1,0 +1,60 @@
+if 4 = 0 4 = 0 4 = 0 4 = 0 4 = 0
+value 2 5
+printstring Guessing
+printspace
+printstring Game!
+wait 1000
+clear
+printstring Enter
+printspace
+printstring the
+printspace
+printstring number
+printspace
+printstring that
+printspace
+printstring the
+printspace
+printstring player
+printspace
+printstring should
+printspace
+printstring guess:
+nextline
+input 1
+clear
+end
+printstring You
+printspace
+printstring have
+printspace
+printvar 2
+printspace
+printstring tries
+printspace
+printstring left!
+printspace
+input 3
+if 3 = 1 3 = 1 3 = 1 3 = 1 3 = 1
+printstring You
+printspace
+printstring Won!
+stop
+end
+if 3 > 1 3 > 1 3 > 1 3 > 1 3 > 1
+printstring Too
+printspace
+printstring Big!
+nextline
+end
+if 3 < 1 3 < 1 3 < 1 3 < 1 3 < 1
+printstring Too
+printspace
+printstring Small!
+nextline
+end
+decrease 2
+if 2 > 5 2 > 5 2 > 5 2 > 5 2 > 5
+value 4 1
+reset
+end
