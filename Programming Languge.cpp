@@ -22,10 +22,9 @@ int get_number_of_digits(int n)
 
 void clear()
 {
-    int i;
-    for (i = 0; i < 10000; i++) a[i] = 0;
-    for (i = 0; i < 10000; i++) b[i] = 0;
-    for (i = 0; i < 10000; i++) c[i] = 0;
+    a[0] = '\0';
+    b[0] = '\0';
+    c[0] = '\0';
     abc = false;
 }
 
@@ -43,7 +42,7 @@ int extension(char b[10000])
     int n, i, j, k, r, m, z, x1, y1, x2, y2, x3, y3, x4, y4, x5, y5;
     while (true)
     {
-        ext:
+    ext:
         fi_e >> c;
         if (strcmp(c, "initialyze") == 0)
         {
@@ -286,7 +285,7 @@ int extension(char b[10000])
                     {
                         fi_e >> r >> a;
                         writefile(r, a);
-                        }
+                    }
                     else if (strcmp(b, "writefileall") == 0)
                     {
                         fi_e >> a;
@@ -301,6 +300,7 @@ int extension(char b[10000])
                     else if (strcmp(b, "end") == 0) break;
                     else if (((var[x1 - 1] < var[y1 - 1] && o1 == '<') || (var[x1 - 1] > var[y1 - 1] && o1 == '>') || (var[x1 - 1] == var[y1 - 1] && o1 == '=') || (var[x1 - 1] != var[y1 - 1] && o1 == '!') && (var[x2 - 1] < var[y2 - 1] && o2 == '<') || (var[x2 - 1] > var[y2 - 1] && o2 == '>') || (var[x2 - 1] == var[y2 - 1] && o2 == '=') || (var[x2 - 1] != var[y2 - 1] && o2 == '!') && (var[x3 - 1] < var[y3 - 1] && o3 == '<') || (var[x3 - 1] > var[y3 - 1] && o3 == '>') || (var[x3 - 1] == var[y3 - 1] && o3 == '=') || (var[x3 - 1] != var[y3 - 1] && o3 == '!') && (var[x4 - 1] < var[y4 - 1] && o4 == '<') || (var[x4 - 1] > var[y4 - 1] && o4 == '>') || (var[x4 - 1] == var[y4 - 1] && o4 == '=') || (var[x4 - 1] != var[y4 - 1] && o4 == '!') && (var[x5 - 1] < var[y5 - 1] && o5 == '<') || (var[x5 - 1] > var[y5 - 1] && o5 == '>') || (var[x5 - 1] == var[y5 - 1] && o5 == '=') || (var[x5 - 1] != var[y5 - 1] && o5 == '!'))) std::cout << "Error: Unknown Command: " << b << '\n';
                 }
+                if (strcmp(b, "end") == 0) break;
             }
         }
         else if (strcmp(c, "for") == 0)
@@ -547,7 +547,7 @@ int extension(char b[10000])
         {
             fi_e >> r >> b;
             writefile(r, b);
-                        }
+        }
         else if (strcmp(c, "writefileall") == 0)
         {
             fi_e >> b;
@@ -569,9 +569,9 @@ int main()
     std::ifstream fi("code.crap");
     char o, p, q, o1, o2, o3, o4, o5;
     int n, i, j, k, r, m, z, x1, y1, x2, y2, x3, y3, x4, y4, x5, y5;
-    while(true)
+    while (true)
     {
-        main:
+    main:
         fi >> c;
         if (strcmp(c, "initialyze") == 0)
         {
@@ -814,7 +814,7 @@ int main()
                     {
                         fi >> r >> a;
                         writefile(r, a);
-                        }
+                    }
                     else if (strcmp(b, "writefileall") == 0)
                     {
                         fi >> a;
@@ -829,6 +829,7 @@ int main()
                     else if (strcmp(b, "end") == 0) break;
                     else if (((var[x1 - 1] < var[y1 - 1] && o1 == '<') || (var[x1 - 1] > var[y1 - 1] && o1 == '>') || (var[x1 - 1] == var[y1 - 1] && o1 == '=') || (var[x1 - 1] != var[y1 - 1] && o1 == '!') && (var[x2 - 1] < var[y2 - 1] && o2 == '<') || (var[x2 - 1] > var[y2 - 1] && o2 == '>') || (var[x2 - 1] == var[y2 - 1] && o2 == '=') || (var[x2 - 1] != var[y2 - 1] && o2 == '!') && (var[x3 - 1] < var[y3 - 1] && o3 == '<') || (var[x3 - 1] > var[y3 - 1] && o3 == '>') || (var[x3 - 1] == var[y3 - 1] && o3 == '=') || (var[x3 - 1] != var[y3 - 1] && o3 == '!') && (var[x4 - 1] < var[y4 - 1] && o4 == '<') || (var[x4 - 1] > var[y4 - 1] && o4 == '>') || (var[x4 - 1] == var[y4 - 1] && o4 == '=') || (var[x4 - 1] != var[y4 - 1] && o4 == '!') && (var[x5 - 1] < var[y5 - 1] && o5 == '<') || (var[x5 - 1] > var[y5 - 1] && o5 == '>') || (var[x5 - 1] == var[y5 - 1] && o5 == '=') || (var[x5 - 1] != var[y5 - 1] && o5 == '!'))) std::cout << "Error: Unknown Command: " << b << '\n';
                 }
+                if (strcmp(b, "end") == 0) break;
             }
         }
         else if (strcmp(c, "for") == 0)
@@ -1078,7 +1079,7 @@ int main()
         else if (strcmp(c, "writefileall") == 0)
         {
             fi >> b;
-            for(r = 1; r <= 10000; r++) writefile(r, b);
+            for (r = 1; r <= 10000; r++) writefile(r, b);
         }
         else if (strcmp(c, ";") == 0) fi >> b;
         else if (strcmp(c, "beep") == 0) std::cout << '\a';
